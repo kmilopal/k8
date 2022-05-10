@@ -26,5 +26,19 @@
 # kubectl scale --replicas=6 -f rs-definition.yml
 # kubectl scale --replicas=6 replicaset rs-name
 # kubectl delete replicaset rs-name
- 
 
+
+# Deployment
+# kubectl apply -f deployment-definition.yml
+# kubectl get deployment
+
+# Namespace
+# kubectl get pods --namespace=dev
+# kubectl create -f namespace.yml
+# kubectl get ns
+# kubectl get namespaces
+
+
+# ResourceQuota
+# kubectl apply -f resourcequota.yml
+# kubectl get resourcequota
