@@ -42,3 +42,10 @@
 # kubectl run custom-nginx --image=nginx --port=8080
 # kubectl deployment redis-deploy --image=redis --namespace=dev-ns --replicas=3
 # kubectl run httpd --image=httpd:alpine --port:80 --expose
+
+# GetCommand
+# kubectl get pod name-pod -o yaml > pod.yaml
+
+
+# ExplainCommand
+# kubectl explain pods --recursive | grep envFrom -A3

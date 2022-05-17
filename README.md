@@ -42,3 +42,18 @@
 # ResourceQuota
 # kubectl apply -f resourcequota.yml
 # kubectl get resourcequota
+
+# ConfigMap
+# kubectl create configmap configmap-name --from-literal=<key>=<value>
+# kubectl create configmap configmap-name --from-file=app_config.properties
+# kubectl get configmaps
+# kubcetl describe configmap name-configmap
+
+
+# Secert 
+# kubectl create secret generic secret-name --from-literal=<key>=<value>
+# kubectl create secret generic secret-name --from-file=<path-to-file>
+# kubectl get secrets
+# kubectl describe secrets
+# kubectl get secret app-secret -o yaml
+
