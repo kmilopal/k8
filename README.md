@@ -50,10 +50,14 @@
 # kubcetl describe configmap name-configmap
 
 
-# Secert 
+# Secret 
 # kubectl create secret generic secret-name --from-literal=<key>=<value>
 # kubectl create secret generic secret-name --from-file=<path-to-file>
 # kubectl get secrets
 # kubectl describe secrets
 # kubectl get secret app-secret -o yaml
 
+# ServiceAccounts
+# kubectl create serviceaccount dashboard-sa
+# kubectl get serviceaccount
+# kubectl describe serviceaccount dashboard-sa

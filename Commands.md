@@ -49,3 +49,9 @@
 
 # ExplainCommand
 # kubectl explain pods --recursive | grep envFrom -A3
+
+# GetMultiplesObjects
+# kubectl get pods,svc
+
+# GetUserWhoIsExecProcess
+# kubectl exec ubuntu-sleeper -- whoami
