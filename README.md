@@ -1,5 +1,7 @@
 # k8
 
+# alias k=kubectl
+
 # To study kubernetes to present EXAM CKAD
 
 # kubectl get pod name-pod -o yaml > pod-definition.yaml
@@ -10,6 +12,7 @@
 # Pod
 # kubectl get pods
 # kubectl apply -f pod-definition.yml
+# kubectl get pod name-pod -o yaml > pod-definition.yaml
 
 
 # ReplicationController
@@ -56,8 +59,31 @@
 # kubectl get secrets
 # kubectl describe secrets
 # kubectl get secret app-secret -o yaml
+# echo -n 'mysql' | base64
+# echo -n 'value' | base64 --decode 
+
+
+# SecurityContexts
+# kubectl exec it name-pod -- bin/sh
+# ps aux
+# kubectl exec name-pod -- whoami
 
 # ServiceAccounts
 # kubectl create serviceaccount dashboard-sa
 # kubectl get serviceaccount
 # kubectl describe serviceaccount dashboard-sa
+# kubectl describe secret dashboard-sa-token-kbbdm
+# kubectl exec -it pod-name ls /var/run/secrets/kubernetes.io/serviceaccount
+# kubectl exec -it pod-name ls /var/run/secrets/kubernetes.io/serviceaccount/token
+# kubectl create token dashboard-sa
+
+# Tains (Node) & Tolerations (Pods)
+# kubectl taint nodes node-name key=value:taint-effect (NoSchedule | PreferNoSchedule | NoExecute)
+# kubectl taint nodes node1 app=blue:NoSchedule
+# kubectl taint nodes controlplane node-role.kubernetes.io/master:NoSchedule-
+
+# Node Selector
+# kubectl label nodes <name-node> <label-key>=<label-value>
+
+# Node Affinity
+# 
